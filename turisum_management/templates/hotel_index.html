@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+{% load static %}
+{% include 'header.html' %}
+
+
+
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hotel Booking</title>
+
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+
+    <style>
+        body{
+            background:#f5f7fa;
+        }
+
+        .hero{
+            background: linear-gradient(rgba(0,0,0,.5),rgba(0,0,0,.5)),
+            url('https://images.unsplash.com/photo-1566073771259-6a8506099945');
+            background-size: cover;
+            background-position: center;
+            height: 80vh;
+            display:flex;
+            align-items:center;
+            justify-content:center;
+            color:white;
+            text-align:center;
+        }
+
+        .booking-card{
+            margin-top:-80px;
+            border-radius:15px;
+            box-shadow:0 5px 20px rgba(0,0,0,0.15);
+        }
+
+        .room-card img{
+            height:220px;
+            object-fit:cover;
+        }
+
+        footer{
+            background:#212529;
+            color:white;
+            padding:20px;
+            text-align:center;
+        }
+    </style>
+</head>
+<body>
+
+<!-- Hero Section -->
+<section class="hero">
+    <div>
+        <h1 class="display-4 fw-bold">Find Your Perfect Stay</h1>
+        <p class="lead">Luxury Rooms at Affordable Prices</p>
+    </div>
+</section>
+
+<!-- Booking Form -->
+<div class="container">
+    <div class="card booking-card p-4">
+        <form>
+            <div class="row g-3">
+                <div class="col-md-3">
+                    <label>Check In</label>
+                    <input type="date" class="form-control">
+                </div>
+
+                <div class="col-md-3">
+                    <label>Check Out</label>
+                    <input type="date" class="form-control">
+                </div>
+
+                <div class="col-md-2">
+                    <label>Guests</label>
+                    <select class="form-select">
+                        <option>1 Guest</option>
+                        <option>2 Guests</option>
+                        <option>3 Guests</option>
+                        <option>4 Guests</option>
+                    </select>
+                </div>
+
+                <div class="col-md-2">
+                    <label>Rooms</label>
+                    <select class="form-select">
+                        <option>1 Room</option>
+                        <option>2 Rooms</option>
+                        <option>3 Rooms</option>
+                    </select>
+                </div>
+
+                <div class="col-md-2 d-flex align-items-end">
+                    <button class="btn btn-primary w-100">
+                        Search
+                    </button>
+                </div>
+            </div>
+        </form>
+    </div>
+</div>
+
+<!-- Rooms Section -->
+<section class="container my-5">
+    <h2 class="text-center mb-4">Popular Rooms</h2>
+
+    <div class="row">
+
+        <div class="col-md-4 mb-4">
+            <div class="card room-card">
+                <img src="https://images.unsplash.com/photo-1590490360182-c33d57733427" class="card-img-top">
+                <div class="card-body">
+                    <h5>Deluxe Room</h5>
+                    <p>Comfortable room with modern amenities.</p>
+                    <h4>$99 / Night</h4>
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+            <div class="card room-card">
+                <img src="https://images.unsplash.com/photo-1618773928121-c32242e63f39" class="card-img-top">
+                <div class="card-body">
+                    <h5>Luxury Suite</h5>
+                    <p>Premium suite with sea view.</p>
+                    <h4>$199 / Night</h4>
+                  
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4 mb-4">
+            <div class="card room-card">
+                <img src="https://images.unsplash.com/photo-1582719508461-905c673771fd" class="card-img-top">
+                <div class="card-body">
+                    <h5>Family Room</h5>
+                    <p>Perfect choice for families and groups.</p>
+                    <h4>$149 / Night</h4>
+                   
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- Features -->
+<section class="bg-light py-5">
+    <div class="container">
+        <div class="row text-center">
+            <div class="col-md-4">
+                <h4>Free WiFi</h4>
+                <p>High-speed internet access.</p>
+            </div>
+
+            <div class="col-md-4">
+                <h4>Swimming Pool</h4>
+                <p>Relax and enjoy our pool area.</p>
+            </div>
+
+            <div class="col-md-4">
+                <h4>24/7 Support</h4>
+                <p>Always available for guests.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="container my-5">
+    <h2 class="text-center mb-5">Popular Hotels Worldwide</h2>
+
+    <div class="row">
+
+        <!-- Australia -->
+        <div class="col-md-3 mb-4">
+            <div class="card h-100">
+                <img src="/static/images/room1.jpg" class="card-img-top">
+                <div class="card-body">
+                    <h5>The Fullerton Hotel</h5>
+                    <p>Sydney, Australia</p>
+                    <h4>$180/Night</h4>
+               
+                </div>
+            </div>
+        </div>
+
+        <!-- Thailand -->
+        <div class="col-md-3 mb-4">
+            <div class="card h-100">
+                <img src="/static/images/room2.jpg" class="card-img-top">
+                <div class="card-body">
+                    <h5>Mandarin Oriental</h5>
+                    <p>Bangkok, Thailand</p>
+                    <h4>$160/Night</h4>
+                    
+                </div>
+            </div>
+        </div>
+
+        <!-- Dubai -->
+        <div class="col-md-3 mb-4">
+            <div class="card h-100">
+                <img src="/static/images/room3.jpg" class="card-img-top">
+                <div class="card-body">
+                    <h5>Burj Al Arab</h5>
+                    <p>Dubai, UAE</p>
+                    <h4>$450/Night</h4>
+                   
+                </div>
+            </div>
+        </div>
+
+        <!-- China -->
+        <div class="col-md-3 mb-4">
+            <div class="card h-100">
+                <img src="/static/images/room4.webp" class="card-img-top">
+                <div class="card-body">
+                    <h5>Fairmont Peace Hotel</h5>
+                    <p>Shanghai, China</p>
+                    <h4>$220/Night</h4>
+                    
+                </div>
+            </div>
+        </div>
+
+        <!-- USA -->
+        <div class="col-md-3 mb-4">
+            <div class="card h-100">
+                <img src="/static/images/room5.jpg" class="card-img-top">
+                <div class="card-body">
+                    <h5>The Plaza Hotel</h5>
+                    <p>New York, USA</p>
+                    <h4>$350/Night</h4>
+                    
+                </div>
+            </div>
+        </div>
+
+        <!-- Italy -->
+        <div class="col-md-3 mb-4">
+            <div class="card h-100">
+                <img src="/static/images/room6.jpg" class="card-img-top">
+                <div class="card-body">
+                    <h5>Hotel Danieli</h5>
+                    <p>Venice, Italy</p>
+                    <h4>$300/Night</h4>
+                    
+                </div>
+            </div>
+        </div>
+
+        <!-- Malaysia -->
+        <div class="col-md-3 mb-4">
+            <div class="card h-100">
+                <img src="/static/images/room7.jpg" class="card-img-top">
+                <div class="card-body">
+                    <h5>Mandarin Oriental</h5>
+                    <p>Kuala Lumpur, Malaysia</p>
+                    <h4>$170/Night</h4>
+                    
+                </div>
+            </div>
+        </div>
+
+        <!-- Switzerland -->
+        <div class="col-md-3 mb-4">
+            <div class="card h-100">
+                <img src="/static/images/room8.avif" class="card-img-top">
+                <div class="card-body">
+                    <h5>The Dolder Grand</h5>
+                    <p>Zurich, Switzerland</p>
+                    <h4>$400/Night</h4>
+                  
+                </div>
+            </div>
+        </div>
+
+    </div>
+</section>
+
+<!-- Footer -->
+<footer>
+    <h5>Hotel Booking System</h5>
+    <p>© 2026 All Rights Reserved</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+
+</body>
+</html>
+
+{% include 'footer.html' %}

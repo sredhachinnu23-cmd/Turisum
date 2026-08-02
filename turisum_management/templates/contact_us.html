@@ -1,0 +1,60 @@
+{% load static %}
+{% include 'header.html' %}
+
+  
+  
+  
+  
+ 
+<section class="booking-section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div style="background: rgba(0,0,0,0.55); padding: 40px; border-radius: 15px; backdrop-filter: blur(5px); ">
+                    <h1 style="text-align:center; color:white;"> Contact Us  </h1>
+                    <form class="form" action="" method="POST">
+                        {% csrf_token %}
+                        <div class="mb-3">
+                            <label class="form-label text-white">Name</label>
+                            <input type="text" name="username_c" class="form-control" placeholder="Enter Your Name">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label text-white">Email</label>
+                            <input type="email" name="useremail_c" class="form-control" placeholder="Enter Your Email">
+                        </div>
+                        
+
+                        <div class="mb-3">
+                            <label class="form-label text-white">Phone Number</label>
+                            <input type="text" name="userphone_c" class="form-control" placeholder="Enter Your Number">
+                        </div>
+
+                        <div class="mb-3">
+                            <label>Message</label>
+                            <textarea name="message_c" class="form-control"></textarea>
+                        </div>
+                        
+                        <div class="form-check mb-4">
+                            <input class="form-check-input"  type="checkbox">
+                            <label class="form-check-label ">
+                                I agree to terms & conditions
+                            </label>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit"
+                            class="btn btn-success px-5 py-2">
+                                Submit
+                            </button>
+                            <div class="col-lg-7 col-md-8 col-12" style="color: black;">
+									<p>( We will be confirm by an  Message or call )</p>
+								</div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section><br><br><br><br>
+
+{% include 'footer.html' %}
+

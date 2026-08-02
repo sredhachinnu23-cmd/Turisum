@@ -1,0 +1,49 @@
+{% load static %}
+{% include 'header.html' %}
+
+<section class="booking-section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div style="background: rgba(0,0,0,0.55); padding: 40px; border-radius: 15px; backdrop-filter: blur(5px); ">
+                    <h1 style="text-align:center; color:white;">Add Packages </h1>
+                    <form class="form" action="" method="POST" enctype="multipart/form-data">
+                        {% csrf_token %}
+                        <div class="mb-3">
+                            <label class="form-label text-white">image</label>
+                            <input type="file" name="image" class="form-control" placeholder="Photo of Destination">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label text-white">Package,name</label>
+                            <input type="text" name="packagename" class="form-control" placeholder="Enter package name">
+                        </div>
+                        
+                        <div class="mb-3">
+                            <label class="form-label text-white">Package,per head</label>
+                            <input type="text" name="package" class="form-control" placeholder="Enter package">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label text-white">Location</label>
+                            <input type="text" name="location" class="form-control" placeholder="">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label text-white">Total Days</label>
+                            <input type="number" name="days" class="form-control" placeholder="number of days ">
+                        </div>
+                        
+                       
+                        <div class="text-center">
+                            <button type="submit"
+                            class="btn btn-success px-5 py-2">
+                                Submit
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section><br><br><br><br>
+
+
+{% include 'footer.html' %}

@@ -1,0 +1,45 @@
+{% load static %}
+{% include 'header.html' %}
+
+
+{% if status %}
+<div class="alert alert-danger" role="alert" style="height: 70 px;width: 200px;">
+  {{ status }}
+</div>
+
+{% endif %}
+
+
+<section class="booking-section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div style="background: rgba(0,0,0,0.55); padding: 40px; border-radius: 15px; backdrop-filter: blur(5px); ">
+                    <h1 style="text-align:center; color:white;">Sign-Up  </h1>
+                    <form class="form" action="" method="POST">
+                        {% csrf_token %}
+                        
+                        <div class="mb-3">
+                            <label class="form-label text-white">Email</label>
+                            <input type="email" name="useremail" class="form-control" placeholder="Enter Your Email">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label text-white">Password</label>
+                            <input type="password" name="userpassword" class="form-control" placeholder="Enter Your Password">
+                        </div>
+
+                       
+                        <div class="text-center">
+                            <button type="submit"
+                            class="btn btn-success px-5 py-2">
+                               Log-in
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section><br><br><br><br>
+
+{% include 'footer.html' %}

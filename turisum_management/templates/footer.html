@@ -1,0 +1,133 @@
+ 
+ {% load static %}
+ 
+ <div class="site-footer">
+		<div class="inner first">
+			<div class="container">
+				<div class="row">
+					<div class="col-md-6 col-lg-4">
+						<h3 class="heading">About Global Tour</h3>
+						                            <p>
+                                                         Explore the world's most beautiful destinations with Global Tour.
+                                                           We provide unforgettable travel experiences, luxury stays, and
+                                                           affordable holiday packages across the globe.</p>
+
+						<div class="widget">
+							<ul class="list-unstyled social">
+								<li><a href="#"><span class="icon-twitter"></span></a></li>
+								<li><a href="#"><span class="icon-instagram"></span></a></li>
+								<li><a href="#"><span class="icon-facebook"></span></a></li>
+								<li><a href="#"><span class="icon-linkedin"></span></a></li>
+								<li><a href="#"><span class="icon-dribbble"></span></a></li>
+								<li><a href="#"><span class="icon-pinterest"></span></a></li>
+								<li><a href="#"><span class="icon-apple"></span></a></li>
+								<li><a href="#"><span class="icon-google"></span></a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="col-md-6 col-lg-2 pl-lg-5">
+						<div class="widget">
+							<h3 class="heading">Quick Links</h3>
+
+                            <ul class="links list-unstyled">
+                            <li><a href="home">Home</a></li>
+                             <li><a href="view_packages">Packages</a></li>
+                             <li><a href="hotel_index">Hotels</a></li>
+                               <li><a href="contact_us">Contact Us</a></li>
+                                 </ul>
+						</div>
+					</div>
+					<div class="col-md-6 col-lg-2">
+						<div class="widget">
+							<h3 class="heading">Services</h3>
+
+                           <ul class="links list-unstyled">
+                           <li><a href="#">Tour Packages</a></li>
+                             <li><a href="#">Hotel Booking</a></li>
+                             <li><a href="#">Travel Guide</a></li>
+                             <li><a href="#">Customer Support</a></li>
+                            </ul>
+						</div>
+					</div>
+					<div class="col-md-6 col-lg-4">
+						<div class="widget">
+							<h3 class="heading">Contact Us</h3>
+
+                                         <ul class="list-unstyled quick-info links">
+											 <li class="email"><a href="#">support@globaltour.com</a></li>
+                                        <li class="phone"> <a href="#">+91 98765 43210</a> </li>
+                                        <li class="address"><a href="#">Kochi, Kerala, India</a></li>
+                                   </ul>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+
+
+		<div class="inner dark">
+			<div class="container">
+				<div class="row text-center">
+					<div class="col-md-8 mb-3 mb-md-0 mx-auto">
+						<p>Copyright &copy;<script>document.write(new Date().getFullYear());</script>. All Rights Reserved. &mdash; Designed with love by <a href="https://untree.co" class="link-highlight">Untree.co</a> <!-- License information: https://untree.co/license/ -->Distributed By <a href="https://themewagon.com" target="_blank" >ThemeWagon</a>
+						</p>
+					</div>
+					
+				</div>
+			</div>
+		</div>
+	</div>
+
+	<div id="overlayer"></div>
+	<div class="loader">
+		<div class="spinner-border" role="status">
+			<span class="sr-only">Loading...</span>
+		</div>
+	</div>
+
+	<script src="{% static 'js/jquery-3.4.1.min.js' %}"></script>
+	<script src="{% static 'js/popper.min.js' %}"></script>
+	<script src="{% static 'js/bootstrap.min.js' %}"></script>
+	<script src="{% static 'js/owl.carousel.min.js' %}"></script>
+	<script src="{% static 'js/jquery.animateNumber.min.js' %}"></script>
+	<script src="{% static 'js/jquery.waypoints.min.js' %}"></script>
+	<script src="{% static 'js/jquery.fancybox.min.js' %}"></script>
+	<script src="{% static 'js/aos.js' %}"></script>
+	<script src="{% static 'js/moment.min.js' %}"></script>
+	<script src="{% static 'js/daterangepicker.js' %}"></script>
+
+	<script src="{% static 'js/typed.js' %}"></script>
+	<script>
+		$(function() {
+			var slides = $('.slides'),
+			images = slides.find('img');
+
+			images.each(function(i) {
+				$(this).attr('data-id', i + 1);
+			})
+
+			var typed = new Typed('.typed-words', {
+				strings: ["San Francisco."," Paris."," New Zealand.", " Maui.", " London."],
+				typeSpeed: 80,
+				backSpeed: 80,
+				backDelay: 4000,
+				startDelay: 1000,
+				loop: true,
+				showCursor: true,
+				preStringTyped: (arrayPos, self) => {
+					arrayPos++;
+					console.log(arrayPos);
+					$('.slides img').removeClass('active');
+					$('.slides img[data-id="'+arrayPos+'"]').addClass('active');
+				}
+
+			});
+		})
+	</script>
+
+	<script src="{% static 'js/custom.js' %}"></script>
+
+</body>
+
+</html>

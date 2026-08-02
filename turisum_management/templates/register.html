@@ -1,0 +1,55 @@
+{% load static %}
+{% include 'header.html' %}
+
+
+<section class="booking-section">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8">
+                <div style="background: rgba(0,0,0,0.55); padding: 40px; border-radius: 15px; backdrop-filter: blur(5px); ">
+                    <h1 style="text-align:center; color:white;">Sign-Up  </h1>
+                    <form class="form" action="" method="POST">
+                        {% csrf_token %}
+                        <div class="mb-3">
+                            <label class="form-label text-white">Name</label>
+                            <input type="text" name="username" class="form-control" placeholder="Enter Your Name">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label text-white">Email</label>
+                            <input type="email" name="useremail" class="form-control" placeholder="Enter Your Email">
+                        </div>
+                        <div class="mb-3">
+                            <label class="form-label text-white">Password</label>
+                            <input type="password" name="userpassword" class="form-control" placeholder="Enter Your Password">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label text-white">Phone Number</label>
+                            <input type="text" name="userphone" class="form-control" placeholder="Enter Your Number">
+                        </div>
+
+                        <div class="mb-3">
+                            <label class="form-label text-white">City</label>
+                            <input type="text" name="usercity" class="form-control" placeholder="Your City">
+                        </div>
+                        
+                        <div class="form-check mb-4">
+                            <input class="form-check-input"  type="checkbox">
+                            <label class="form-check-label">
+                                I agree to terms & conditions
+                            </label>
+                        </div>
+                        <div class="text-center">
+                            <button type="submit"
+                            class="btn btn-success px-5 py-2">
+                                Submit
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</section><br><br><br><br>
+
+{% include 'footer.html' %}

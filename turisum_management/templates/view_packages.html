@@ -1,0 +1,36 @@
+{% load static %}
+{% include 'header.html' %}
+
+
+<div class="container">
+  <div class="row">
+
+ {% for i in result %}
+
+      <div class="col">
+           
+        <div class="card" style="width: 18rem;">
+  <img src="../media/{{i.image}}" class="card-img-top" alt="..." style="height: 200px;">
+  <div class="card-body">
+    <h5 class="card-title">Package :{{i.packagename}}</h5>
+   
+  </div>
+  <ul class="list-group list-group-flush">
+    <li class="list-group-item">Budget in $ : {{i.package}}</li>
+    <li class="list-group-item">Location :{{i.location}}</li>
+    <li class="list-group-item">Number Of Days :{{i.days}} ,Days</li>
+  </ul>
+  <div class="card-body">
+   <li> <a href="booking" class="card-link"><button class="btn btn-success">Book Now</button></a></li>
+    
+  </div>
+</div>
+         
+      </div>
+   
+{% endfor %}
+
+  </div>
+</div><br><br><br>
+
+{% include 'footer.html' %}

@@ -1,0 +1,139 @@
+/* FEATURES SECTION */
+
+.features{
+    padding: 80px 20px;
+}
+
+/* TITLE */
+
+.section-title{
+    text-align: center;
+    margin-bottom: 60px;
+}
+
+.section-title h2{
+    font-size: 45px;
+    color: white;
+    font-weight: bold;
+}
+
+.section-title p{
+    color: #f1f1f1;
+    font-size: 18px;
+    margin-top: 15px;
+}
+
+.section-title img{
+    width: 90px;
+    margin: 20px 0;
+}
+
+/* FEATURE CARD */
+
+.single-features{
+    background: rgba(255,255,255,0.12);
+
+    border: 1px solid rgba(255,255,255,0.2);
+
+    backdrop-filter: blur(10px);
+
+    padding: 40px 25px;
+
+    border-radius: 20px;
+
+    text-align: center;
+
+    transition: 0.4s;
+
+    margin-bottom: 30px;
+
+    height: 100%;
+}
+
+/* HOVER */
+
+.single-features:hover{
+    transform: translateY(-10px);
+
+    box-shadow: 0px 10px 25px rgba(0,0,0,0.2);
+}
+
+/* ICON */
+
+.single-icon i{
+    font-size: 60px;
+    color: #ffcc00;
+
+    margin-bottom: 20px;
+
+    display: inline-block;
+}
+
+/* TEXT */
+
+.single-features h3{
+    color: white;
+    font-size: 28px;
+    margin-bottom: 15px;
+}
+
+.single-features p{
+    color: #f1f1f1;
+    line-height: 1.7;
+}
+
+/* RESPONSIVE */
+
+@media(max-width:768px){
+
+    .section-title h2{
+        font-size: 32px;
+    }
+
+    .single-features{
+        padding: 30px 20px;
+    }
+
+}
+.features-section{
+    padding:80px 0;
+}
+
+.feature-banner{
+    background:
+        linear-gradient(rgba(0,0,0,0.5),
+        rgba(0,0,0,0.5)),
+        url('/static/images/bg-11.png');
+
+    background-size:cover;
+    background-position:center;
+    padding:80px 40px;
+    border-radius:20px;
+    color:white;
+}
+
+.feature-card{
+    background:white;
+    color:#333;
+    text-align:center;
+    padding:30px 20px;
+    border-radius:15px;
+    box-shadow:0 5px 20px rgba(0,0,0,0.15);
+    transition:0.3s;
+    height:100%;
+}
+
+.feature-card:hover{
+    transform:translateY(-10px);
+}
+
+.feature-card i{
+    font-size:50px;
+    color:#0d6efd;
+    margin-bottom:15px;
+}
+
+.feature-card h3{
+    font-weight:700;
+    margin-bottom:15px;
+}

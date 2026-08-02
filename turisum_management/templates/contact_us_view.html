@@ -1,0 +1,36 @@
+{% load static %}
+{% include 'header.html' %}
+
+
+<div class="container">
+    <h2>contact DETAILS</h2>
+    <table class="table">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Name</th>
+      <th scope="col">Email</th>
+      <th scope="col">Phone</th>
+      <th scope="col">Message</th>
+      
+    </tr>
+  </thead>
+  <tbody>
+    {% for i in result %}
+    <tr>
+      
+      <td>{{i.id}}</td>
+      <td>{{i.username_c}}</td>
+      <td>{{i.useremail_c}}</td>
+      <td>{{i.userphone_c}}</td>
+      <td>{{i.message_c}}</td>
+       
+    </tr>
+     {% endfor %}
+   
+  </tbody>
+</table>
+</div>
+
+{% include 'footer.html' %}
+
