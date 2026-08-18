@@ -25,7 +25,7 @@ SECRET_KEY = 'django-insecure-j*ttp2&dkpsbf4=o_epl#qa08lcjn+7mu#yrus6yxm+jx@jd6t
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = [\"turisum-1.onrender.com\", \"127.0.0.1\", \"localhost\"]
+ALLOWED_HOSTS =["turisum-1.onrender.com", "127.0.0.1", "localhost"]
 
 
 # Application definition
